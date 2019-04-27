@@ -5,7 +5,7 @@ import os
 
 # Mengambil nilai username dan password SSO UI dari environtment
 # Variabel di sistem operasi yang sedang berjalan. Jika environtmen variabel tidak ditemukan atau kosong, maka Python aka mengisi dengan string default
-KEYWORD = os.getenv('UI_SSO_USERNAME', 'Harga IHSG hari ini')
+KEYWORD = os.getenv('KEYWORD', 'Harga IHSG hari ini')
 
 if __name__ == '__main__':
   # Membuat driver/'jembatan' ke Firefox

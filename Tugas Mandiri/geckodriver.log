@@ -33,3 +33,12 @@ console.error: BroadcastService:
 1556369786433	Marionette	WARN	TLS certificate errors will be ignored for this session
 1556369787349	Marionette	INFO	Stopped listening on port 52196
 1556369790637	Marionette	INFO	Stopped listening on port 52266
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1556369877673	Marionette	INFO	Stopped listening on port 52343
