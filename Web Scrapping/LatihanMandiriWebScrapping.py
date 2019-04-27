@@ -9,16 +9,15 @@ if __name__ == '__main__':
   document = requests.get(SCELE_URL)
   # Parse teks dokumen HTML ke objek DOM menggunakan Beautiful Soup
   dom_object = BeautifulSoup(document.text, 'lxml')
+  # Peroleh referensi ke semua tag 'div' dengan id 'site-news-forum'
 
-  # Peroleh referensi ke semua tag 'div' dengan class 'posting fullpost'
-
-  post_divs = dom_object.findAll(name='div', attrs={'class': 'posting fullpost'})
+  post_divs = dom_object.findAll(name='div', attrs={'id': 'site-news-forum'})
 
   # Ambil semua konten teks dari setiap tag 'div'
   post_contents = [post.text for post in post_divs]
+  print(post_contents)
   # Lalu siapkan struktur data dictionary untuk menyimpan setiap teks
   posts = [{'content': content} for content in post_contents]
-
   output_file = open('output.json', 'w', encoding='utf8')
   # Buat format JSON yang membungkus setiap konten teks
   json_output = {
